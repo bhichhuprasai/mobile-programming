@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Simple Calculator</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
+
         <h2>Simple Calculator</h2>
 
-        <input type="number" id="num1" placeholder="Enter first number">
-        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="number" id="s1" placeholder="Enter first number">
 
-        <div class="buttons">
-            <button onclick="add()">Add</button>
-            <button onclick="subtract()">Subtract</button>
-            <button onclick="multiply()">Multiply</button>
-            <button onclick="divide()">Divide</button>
-        </div>
+        <input type="number" id="s2" placeholder="Enter second number">
 
-        <h3 id="result">Result: </h3>
+        <br><br>
+
+        <button onclick="calculate('add')">Add</button>
+
+        <button onclick="calculate('subtract')">Subtract</button>
+
+        <button onclick="calculate('multiply')">Multiply</button>
+
+        <button onclick="calculate('divide')">Divide</button>
+
+        <h3 id="result">Result:</h3>
+
     </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>

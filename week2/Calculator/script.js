@@ -1,39 +1,49 @@
-function getNumbers() {
-    let num1 = parseFloat(document.getElementById("num1").value);
-    let num2 = parseFloat(document.getElementById("num2").value);
+function calculate(operation) {
 
-    return [num1, num2];
-}
+    let num1 = Number(document.getElementById("s1").value);
 
-function add() {
-    let [num1, num2] = getNumbers();
+    let num2 = Number(document.getElementById("s2").value);
 
-    document.getElementById("result").innerHTML =
-        "Result: " + (num1 + num2);
-}
+    let result = document.getElementById("result");
 
-function subtract() {
-    let [num1, num2] = getNumbers();
+    let answer;
 
-    document.getElementById("result").innerHTML =
-        "Result: " + (num1 - num2);
-}
+    result.style.color = "black";
 
-function multiply() {
-    let [num1, num2] = getNumbers();
+    if (operation === "add") {
 
-    document.getElementById("result").innerHTML =
-        "Result: " + (num1 * num2);
-}
+        answer = num1 + num2;
 
-function divide() {
-    let [num1, num2] = getNumbers();
-
-    if (num2 === 0) {
-        document.getElementById("result").innerHTML =
-            "Cannot divide by zero!";
-    } else {
-        document.getElementById("result").innerHTML =
-            "Result: " + (num1 / num2);
     }
+
+    else if (operation === "subtract") {
+
+        answer = num1 - num2;
+
+    }
+
+    else if (operation === "multiply") {
+
+        answer = num1 * num2;
+
+    }
+
+    else if (operation === "divide") {
+
+        if (num2 === 0) {
+
+            result.style.color = "red";
+
+            answer = "Cannot divide by zero";
+
+        }
+
+        else {
+
+            answer = num1 / num2;
+
+        }
+    }
+
+    result.innerHTML = "Result: " + answer;
 }
