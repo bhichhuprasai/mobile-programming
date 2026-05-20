@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ATM Machine</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #amount {
+            display: none;
+            padding: 10px;
+        }
+
+        #eyeIcon {
+            cursor: pointer;
+            font-size: 22px;
+            margin-left: 10px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ATM Machine</h1>
+
+    <h2>
+        <span id="balanceText">Balance: Rs. 10000</span>
+        <i class="fa-solid fa-eye" id="eyeIcon"></i>
+    </h2>
+
+    <input type="number" id="amount" placeholder="Enter Amount">
+
+    <br><br>
+
+    <button id="withdrawBtn">Withdraw</button>
+    <button id="depositBtn">Deposit</button>
+
+    <h3 id="message"></h3>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

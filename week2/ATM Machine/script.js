@@ -49,6 +49,7 @@ function withdraw() {
 // DEPOSIT FUNCTION
 function deposit() {
 
+
     let amount = Number(document.getElementById("amount").value);
 
     // PIN check first
@@ -73,3 +74,6 @@ function deposit() {
 
     alert("Deposit Successful");
 }
+
+
+
