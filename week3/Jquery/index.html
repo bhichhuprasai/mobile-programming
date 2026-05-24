@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Profile Card</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+  <div id="profile-card">
+
+    <!-- Your Photo -->
+    <img id="profile-photo" src="myphoto.jpg" alt="My Photo">
+
+    <h2 id="student-name">John Doe</h2>
+
+    <p id="student-bio">
+      <b>Web Developer</b> who loves coding and design.
+    </p>
+
+    <input type="text" id="nickname-input" placeholder="Enter nickname">
+
+    <h3>Skills</h3>
+
+    <ul id="skills-list">
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>JavaScript</li>
+      <li>jQuery</li>
+    </ul>
+
+  </div>
+
+  <!-- GET & SET -->
+  <button id="show-name">Show Name</button>
+  <button id="change-name">Change Name</button>
+  <button id="show-bio">Show Bio</button>
+  <button id="get-input">Get Input</button>
+  <button id="set-input">Set Input</button>
+
+  <br><br>
+
+  <!-- CSS CLASSES -->
+  <button id="highlight-card">Highlight Card</button>
+  <button id="remove-highlight">Remove Highlight</button>
+  <button id="toggle-dark">Toggle Dark Mode</button>
+  <button id="toggle-rounded">Toggle Rounded</button>
+
+  <br><br>
+
+  <!-- CSS METHOD -->
+  <button id="red-bg">Red Background</button>
+  <button id="reset-bg">Reset Background</button>
+
+  <br><br>
+
+  <!-- HIDE & SHOW -->
+  <button id="hide-photo">Hide Photo</button>
+  <button id="show-photo">Show Photo</button>
+  <button id="toggle-bio">Toggle Bio</button>
+
+  <br><br>
+
+  <!-- FADE -->
+  <button id="fade-out">Fade Out Card</button>
+  <button id="fade-in">Fade In Card</button>
+  <button id="fade-half">Fade to 50%</button>
+
+  <br><br>
+
+  <!-- SLIDE -->
+  <button id="slide-up">Slide Up Skills</button>
+  <button id="slide-down">Slide Down Skills</button>
+  <button id="slide-toggle">Slide Toggle Skills</button>
+
+  <br><br>
+
+  <!-- ANIMATE -->
+  <button id="animate-card">Animate Card</button>
+
+  <div id="output"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
