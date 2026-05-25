@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Profile Card</title>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>"
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+        }
+
+        #profile-card {
+            width: 350px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #ccc;
+            background: white;
+        }
+
+        #profile-photo {
+            width: 150px;
+            height: 150px;
+        }
+
+        .highlighted {
+            border: 4px solid gold;
+            color: green;
+        }
+
+        .dark-mode {
+            background: #333 !important;
+            color: red;
+        }
+
+        .rounded {
+            border-radius: 50%;
+        }
+
+        .shadow {
+            box-shadow: 0px 0px 15px gray;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        #output {
+            margin-top: 15px;
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="profile-card">
+
+        <h2 id="student-name">Bhichhu Prasai</h2>
+
+        <img id="profile-photo"
+             src="myphoto.jpg"
+             alt="Profile Photo">
+
+        <p id="student-bio">
+            <b>BScIT Student</b> I love coding and technology.
+        </p>
+
+        <input type="text" id="nickname-input" value="Bhichhu">
+
+        <ul id="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </div>
+
+    <h3>Output:</h3>
+    <div id="output"></div>
+
+    <!-- GET & SET -->
+    <button id="show-name">Show Name</button>
+    <button id="show-bio">Show Bio</button>
+    <button id="get-nickname-input">Get nickname-Input</button>
+    <button id="set-nickname-input">Set nickname-input</button>
+
+    <br><br>
+
+    <!-- CSS Classes -->
+    <button id="highlight-card">Highlight Card</button>
+    <button id="remove-highlight">Remove Highlight</button>
+    <button id="toggle-dark">Toggle Dark Mode</button>
+    <button id="toggle-rounded">Toggle Rounded</button>
+
+    <br><br>
+
+    <!-- CSS Method -->
+    <button id="red-bg">Red Background</button>
+    <button id="reset-bg">Reset Background</button>
+
+    <br><br>
+
+    <!-- Hide & Show -->
+    <button id="hide-photo">Hide Photo</button>
+    <button id="show-photo">Show Photo</button>
+    <button id="toggle-bio">Toggle Bio</button>
+
+    <br><br>
+
+    <!-- Fade -->
+    <button id="fade-out">Fade Out Card</button>
+    <button id="fade-in">Fade In Card</button>
+    <button id="fade-half">Fade to 50%</button>
+
+    <br><br>
+
+    <!-- Slide -->
+    <button id="slide-up">Slide Up Skills</button>
+    <button id="slide-down">Slide Down Skills</button>
+    <button id="slide-toggle">Slide Toggle Skills</button>
+
+    <br><br>
+
+    <!-- Animate -->
+    <button id="animate-card">Animate Card</button>
+
+    <script>
+        $(document).ready(function () {
+
+            // GET & SET
+            $("#show-name").click(function () {
+                $("#output").text($("#student-name").text());
+            });
+
+            $("#show-bio").click(function () {
+                $("#output").text($("#student-bio").html());
+            });
+
+            $("#set-nickname-input").click(function () {
+                $("#nickname-input").val("jQuery Pro");
+            });
+
+
+            // CSS Classes
+            $("#highlight-card").click(function () {
+                $("#profile-card").addClass("highlighted");
+            });
+
+            $("#remove-highlight").click(function () {
+                $("#profile-card").removeClass("highlighted");
+            });
+
+            $("#toggle-dark").click(function () {
+                $("#profile-card").toggleClass("dark-mode");
+            });
+
+            $("#toggle-rounded").click(function () {
+                $("#profile-photo").toggleClass("rounded");
+            });
+
+            // CSS Method
+            $("#red-bg").click(function () {
+                $("#profile-card").css("background", "#e74c3c");
+            });
+
+            $("#reset-bg").click(function () {
+                $("#profile-card").css("background", "white");
+            });
+
+            // Hide & Show
+            $("#hide-photo").click(function () {
+                $("#profile-photo").hide("slow");
+            });
+
+            $("#show-photo").click(function () {
+                $("#profile-photo").show("slow");
+            });
+
+            $("#toggle-bio").click(function () {
+                $("#student-bio").toggle();
+            });
+
+            // Fade
+            $("#fade-out").click(function () {
+                $("#profile-card").fadeOut();
+            });
+
+            $("#fade-in").click(function () {
+                $("#profile-card").fadeIn();
+            });
+
+            $("#fade-half").click(function () {
+                $("#profile-card").fadeTo("slow", 0.5);
+            });
+
+            // Slide
+            $("#slide-up").click(function () {
+                $("#skills-list").slideUp();
+            });
+
+            $("#slide-down").click(function () {
+                $("#skills-list").slideDown();
+            });
+
+            $("#slide-toggle").click(function () {
+                $("#skills-list").slideToggle();
+            });
+
+            // Animate
+            $("#animate-card").click(function () {
+                $("#profile-card")
+                    .animate({ marginLeft: "200px" }, 1000)
+                    .animate({ marginLeft: "0px" }, 1000);
+            });
+
+            // Events
+            $("#profile-photo").mouseenter(function () {
+                $(this).addClass("shadow");
+            });
+
+            $("#profile-photo").mouseleave(function () {
+                $(this).removeClass("shadow");
+            });
+
+            $("#nickname-input").keypress(function (event) {
+                $("#output").text("Pressed key: " + event.key);
+            });
+
+        });
+    </script>
+
+</body>
+</html>
