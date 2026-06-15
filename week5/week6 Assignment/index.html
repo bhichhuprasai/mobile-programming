@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Firebase</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 420px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        .box {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        h2 { text-align: center; margin-bottom: 20px; color: #333; }
+        label { display: block; margin: 12px 0 5px; font-weight: bold; color: #555; }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        textarea { resize: vertical; height: 100px; }
+        .btn-group { margin-top: 20px; display: flex; gap: 10px; }
+        button {
+            flex: 1;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:first-child { background: #667eea; color: white; }
+        .update-btn { background: #f0932b; color: white; }
+        .edit-btn {
+            float: right;
+            background: #eee;
+            padding: 8px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            color: #667eea;
+            font-weight: bold;
+        }
+        .edit-btn:hover { background: #ddd; }
+        p { margin: 10px 0; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- FORM BOX -->
+        <div class="box" id="formBox">
+            <h2>Contact Us</h2>
+            
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+            
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+            
+            <label>Contact Number</label>
+            <input type="tel" id="contact" placeholder="9800000000">
+            
+            <label>Message</label>
+            <textarea id="message" placeholder="Write your message here..."></textarea>
+            
+            <div class="btn-group">
+                <button id="submitBtn">Submit</button>
+                <button id="updateBtn" class="update-btn">Update</button>
+            </div>
+        </div>
+
+        <!-- DISPLAY BOX -->
+        <div class="box" id="displayBox">
+            <div class="edit-btn" id="editBtn">✏️ Edit</div>
+            <h2>Contact Details</h2>
+            
+            <p><strong>Name:</strong> <span id="dName">—</span></p>
+            <p><strong>Email:</strong> <span id="dEmail">—</span></p>
+            <p><strong>Contact:</strong> <span id="dContact">—</span></p>
+            <p><strong>Message:</strong> <span id="dMessage">—</span></p>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
