@@ -36,7 +36,6 @@ async function saveData() {
     const email = document.getElementById("email").value.trim();
     const contact = document.getElementById("contact").value.trim();
     const message = document.getElementById("message").value.trim();
-
     if (!name || !email || !contact || !message) {
         alert("Please fill all fields!");
         return;
@@ -85,7 +84,6 @@ async function updateData() {
         alert("Please save data first!");
         return;
     }
-
     const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const contact = document.getElementById("contact").value.trim();
