@@ -1,0 +1,26 @@
+{
+  "expo": {
+    "name": "HostelFinder",
+    "slug": "hostelfinder-nepal",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#5B4FE9"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.hostelfinder.nepal"
+    },
+    "android": {
+      "package": "com.hostelfinder.nepal",
+      "adaptiveIcon": {
+        "backgroundColor": "#5B4FE9"
+      }
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
